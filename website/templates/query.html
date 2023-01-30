@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+{% if user.email == 'lalit@gmail.com' %}
+<div class="query_container">
+    <ul>
+        {% for da in dataa %}
+            <li>User Email = {% for u in users %}
+                {% if u.id == da.user_id %}
+                    {{u.email}}
+                {% endif %}
+            {% endfor %} | Message = {{da.data}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% else %}
+<div class="query_container">
+    <ul>
+        {% for note in user.notes %}
+            <li>{{note.data}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div  class="contact_section"><a href="/#contact_me_now"><button type="button" id="My-work">Add another message?</button></a>
+</div>
+{% endif %}
+{% endblock  %}

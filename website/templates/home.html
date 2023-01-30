@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="intro_section">
+    <div>
+        <img src="/static/intro_image.png" alt="my-photo">
+    </div>
+    <div class="intro_section_text">
+            <h1>Hi,<br/>
+            My name is <span class="lalit">Lalit Bawa</span> <br/>
+            I’m a <span class="lalit">Web Developer</span></h1>
+        <div class="intro_section_text_btn">
+            <a href="/#contact_me_now"><button type="button">Contact me</button></a>
+            <a href="/#my_work"><button type="button" id="My-work">My Work</button></a>
+        </div>
+            <div class="social_icons">
+                <a href="https://github.com/lalitbawa/"><img src="/static/github.png" alt="github"></a>
+                <a href="mailto: lbawa7838@gmail.com"><img src="/static/email.png" alt="twitter"></a>
+                <a href="https://www.linkedin.com/in/lalit-bawa"><img src="/static/linkedin.png" alt="linkedin"></a>
+            </div>
+        
+    </div>
+</div>
+<h2 class="i_work_text">I work with</h2>
+<div class="about_section">
+    <div class="about_section_skills">
+        <div class="about_section_skills_images">
+            <div>
+            <img src="/static/js.png" alt="javasc">
+            <p>Javascript</p>
+            </div>
+            <div class="react_img">
+            <img src="/static/react.png" alt="react">
+            <p>React</p>
+            </div>
+            <div>
+            <img src="/static/java.png" alt="java">
+            <p>Java</p>
+            </div>
+            <div>
+            <img src="/static/git.png" alt="git">
+            <p>Git</p>
+            </div>
+            <div class="figma_img">
+            <img src="/static/figma.png" alt="figma">
+            <p>Figma</p>
+            </div>
+            <div>
+            <img src="/static/html.png" alt="html">
+            <p>Html</p>
+            </div>
+            <div>
+            <img src="/static/css.png" alt="css">
+            <p>Css</p>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="work" id="my_work">My Work</h2>
+<div class="end_section">
+    <div class="work_section">
+        <div class="work_section_project1">
+        <h3 id="bd_logo">Beyond Designs- Web app</h3>
+        <p>Beyond Designs is a fictional online clothing platform that deals with designer clothing. Please note that I'm still working on this project but you can still see the progress as i update it every other day. To report a bug - Please contact me through the E-mail Address below.</p>
+        <a href="http://lalitbawa.netlify.app" target="_blank"><button type="button">Visit Website</button></a>
+        </div>
+        <div class="work_section_project1">
+            <h3 id="bd_logo">Flyonlow.com UI-Design</h3>
+        <p>This is the design of a fictitious Mobile application. Flyonlow is a fictitious online website to book flight tickets as well as search for the best fares with Multiple Airlines. It will use an open-source API to fetch flight details e.g. Departure/Arrival times, On-time status, and more.</p>
+        <a href="/static/fol.html" target="_blank"><button type="button">View Design</button></a>
+        </div>
+    </div>
+    <div  class="contact_section">
+        <form id="contact_me_now" method="POST">
+            <div><textarea placeholder="How can i help you?" id="comment" name="note"></textarea></div>
+            {% if user.is_authenticated %}
+            <div><button id="contact_me_now" type="submit">Let's get started</button></div>
+            {% else %}
+            <a href="/login"><button type="button" id="My-work">Please Login/Sign up first</button></a>
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endblock  %}

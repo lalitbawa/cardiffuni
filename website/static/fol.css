@@ -1,0 +1,52 @@
+*{
+    margin: 0;padding: 0;
+}
+
+.fol_main{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
+.fol_main_but{
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #45A3E6;
+    height: 1.5rem;
+    width: 6rem;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fol_main_but a{
+    color: white;
+    text-decoration: none;
+}
+
+.fol_main img{
+    height: 20rem;
+    width: 12rem;
+}
+
+.fol_main1,
+.fol_main2{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0 1rem 0;
+}
+
+@media screen and (max-width: 550px){
+    .fol_main1,
+    .fol_main2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fol_main img{
+        margin: 0.5rem 0 0.5rem 0;
+        width: 80vw;
+        height: auto;
+    }
+}
